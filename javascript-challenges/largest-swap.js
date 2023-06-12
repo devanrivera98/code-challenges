@@ -15,3 +15,9 @@ function largestSwap(num) {
 }
 
 largestSwap(27);
+
+// improved way to make this
+
+// function largestSwap(num) {
+//   return num.toString().charAt(0) >= num.toString().charAt(1);
+// }
