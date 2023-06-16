@@ -6,7 +6,7 @@ export function isFirstSuperior(arr1, arr2) {
     const comparativeValue = arr1[i].localeCompare(arr2[i]);
     if (comparativeValue === 1) {
       return true;
-    } else if (comparativeValue === -11) {
+    } else if (comparativeValue === -1) {
       return false;
     }
   }
