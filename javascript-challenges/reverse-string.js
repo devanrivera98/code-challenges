@@ -1,4 +1,4 @@
-// reverse a string that is passed as the argument
+// reverse a string that is passed as the argument here
 
 export function FirstReverse(str) {
 
