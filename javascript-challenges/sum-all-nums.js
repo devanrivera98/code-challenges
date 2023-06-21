@@ -15,4 +15,4 @@ export function sumAll(arr) {
   }
 }
 
-sumAll([1, 4]);
+sumAll([1, 5]);
