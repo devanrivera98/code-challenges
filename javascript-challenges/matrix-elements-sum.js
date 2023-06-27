@@ -2,17 +2,16 @@
 
 export function matrixSum(matrix) {
   let totalSum = 0;
-  console.log(matrix[2]);
-  console.log(matrix.length);
-  for (let i = 0; i < matrix[0].length; i++) {
+  const numRows = matrix.length;
+  const numCols = matrix[0].length;
+
+  for (let i = 0; i < numCols; i++) {
     let j = 0;
-    while (j < matrix.length && matrix[j][i] !== 0) {
+    while (j < numRows && matrix[j][i] !== 0) {
       totalSum += matrix[j][i];
-      console.log(totalSum);
       j++;
     }
   }
-  console.log('this is the final', totalSum);
   return totalSum;
 }
 
