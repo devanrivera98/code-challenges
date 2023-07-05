@@ -1,5 +1,4 @@
 export function destroyer(arr, ...args) {
-  console.log(args);
   return arr.filter(index => !args.includes(index));
 }
 
