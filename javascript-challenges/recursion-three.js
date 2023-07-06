@@ -1,5 +1,5 @@
 export function replicateRecursion(times, count) {
-  if (amount <= 0) {
+  if (times <= 0) {
     return [];
   }
 
