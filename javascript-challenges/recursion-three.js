@@ -1,7 +1,7 @@
-export function replicateRecursion(amount, count) {
-  if (amount <= 0) {
+export function replicateRecursion(times, count) {
+  if (times <= 0) {
     return [];
   }
 
-  return [count].concat(replicateRecursion(amount - 1, count));
+  return [count].concat(replicateRecursion(times - 1, count));
 }
