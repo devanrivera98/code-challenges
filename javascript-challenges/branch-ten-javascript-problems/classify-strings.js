@@ -6,18 +6,20 @@ export function classifyStrings(s) {
   let isConsecutiveConsonants = false;
   // console.log(s.length);
   for (let i = 0; i < s.length; i++) {
+    console.log(s[i]);
     if (s[i] === '?') {
       console.log(s[i]);
       countVowels++;
       countConsonants++;
-    }
-    if (vowels.includes(s[i])) {
+    } else if (vowels.includes(s[i])) {
       countVowels++;
       countConsonants = 0;
-    }
-    if (!(vowels.includes(s[i]))) {
+    } else {
       countVowels = 0;
       countConsonants++;
+    }
+    if (countVowels >= 3 || countConsonants >= 5) {
+      break;
     }
   }
   if (countVowels >= 3) {
@@ -29,13 +31,27 @@ export function classifyStrings(s) {
   }
 
   console.log(countVowels);
-  if (isConsecutiveVowels && isConsecutiveConsonants) {
+  if (isConsecutiveConsonants && s.includes('?')) {
+    return 'mixed';
+  } else if (isConsecutiveVowels && s.includes('?')) {
+    return 'mixed';
+  } else if (isConsecutiveVowels && isConsecutiveConsonants) {
     return 'bad';
   } else if (isConsecutiveVowels || isConsecutiveConsonants) {
     return 'bad';
-  } else if (s.includes('?')) {
-    return 'mixed';
   } else {
     return 'good';
   }
+
+  // if (isConsecutiveConsonants && isConsecutiveVowels && s.includes('?')) {
+  //   return 'mixed';
+  // } else if (isConsecutiveVowels && isConsecutiveConsonants) {
+  //   return 'bad';
+  // } else if (isConsecutiveVowels || isConsecutiveConsonants) {
+  //   return 'bad';
+  // } else if (s.includes('?')) {
+  //   return 'mixed';
+  // } else {
+  //   return 'good';
+  // }
 }
