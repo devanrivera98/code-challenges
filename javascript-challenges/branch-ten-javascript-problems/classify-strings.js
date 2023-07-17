@@ -4,10 +4,10 @@ export function classifyStrings(s) {
   let countConsonants = 0;
   let isConsecutiveVowels = false;
   let isConsecutiveConsonants = false;
-  console.log(s.length);
-
-  for (let i = 1; i < s.length; i++) {
+  // console.log(s.length);
+  for (let i = 0; i < s.length; i++) {
     if (s[i] === '?') {
+      console.log(s[i]);
       countVowels++;
       countConsonants++;
     }
@@ -21,15 +21,21 @@ export function classifyStrings(s) {
     }
   }
   if (countVowels >= 3) {
+    console.log(countVowels);
     isConsecutiveVowels = true;
   }
   if (countConsonants >= 5) {
     isConsecutiveConsonants = true;
   }
 
+  console.log(countVowels);
   if (isConsecutiveVowels && isConsecutiveConsonants) {
     return 'bad';
   } else if (isConsecutiveVowels || isConsecutiveConsonants) {
     return 'bad';
+  } else if (s.includes('?')) {
+    return 'mixed';
+  } else {
+    return 'good';
   }
 }
