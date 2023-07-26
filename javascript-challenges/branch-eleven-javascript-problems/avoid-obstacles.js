@@ -16,4 +16,5 @@ export function avoidObstacles(inputArray) {
       }
     }
   }
+  return Math.max(...inputArray) + 1;
 }
