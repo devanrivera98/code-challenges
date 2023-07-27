@@ -18,3 +18,10 @@ export function avoidObstacles(inputArray) {
   }
   return Math.max(...inputArray) + 1;
 }
+
+// Alternate solution
+// let jump = 2;
+// while (inputArray.some((obstacle) => obstacle % jump == 0)) {
+//   jump++;
+// }
+// return jump;
