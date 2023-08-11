@@ -6,7 +6,6 @@ export default function circleOfNumbers(n, firstNumber) {
     return total;
   } else {
     const newDifference = (n / 2) - firstNumber;
-    console.log('this is the newDifference', newDifference);
     return n - newDifference;
   }
 }
