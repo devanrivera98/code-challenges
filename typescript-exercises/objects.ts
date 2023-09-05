@@ -70,3 +70,62 @@ const mySong: Song = {
 const earnings = calculatePayout(mySong)
 console.log(earnings)
 printSong(mySong)
+
+type Point2 = {
+  x: number;
+  y:number;
+  z?:number;
+}
+// ? makes the parameter optional when used in the future
+
+const myPoing: Point = {x:1,y:3};
+
+type User = {
+  readonly id: number;
+  username: string;
+};
+
+const user: User = {
+  id: 12837,
+  username: 'catperson'
+}
+
+console.log(user.id);
+// it is readonly so you cannot touch it at all
+// user.id = 239974
+
+//intersection type
+
+type Circle = {
+  radius: number;
+}
+
+type Colorful = {
+  color: string;
+}
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: 'yellow'
+}
+
+type Cat = {
+  numlives: number
+}
+
+type Dog = {
+  breed:string
+}
+
+type CatDog = Cat & Dog & {
+  // inclues the new requirement which is number
+  age: number;
+}
+
+const christy: CatDog = {
+  numlives: 7,
+  breed: 'Husky',
+  age: 9
+}
