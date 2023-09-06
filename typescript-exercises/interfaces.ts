@@ -31,3 +31,38 @@ const thomas: Person = {
     return 'hello';
   },
 };
+
+interface Product {
+  name: string,
+  price: number,
+  applyDiscount(discount: number): number;
+}
+
+const shoes: Product = {
+  name: 'blue shoes',
+  price: 100,
+  applyDiscount(amount: number) {
+    return 2
+  }
+}
+
+console.log(shoes.applyDiscount(.4))
+
+interface Dog {
+  name: string;
+  age: number;
+}
+
+interface Dog {
+  breed: string;
+  bark(): string;
+}
+
+const elton: Dog = {
+  name: 'Elton',
+  age: 0.5,
+  breed: 'Shepard',
+  bark() {
+    return 'Woof Woof!'
+  }
+}
