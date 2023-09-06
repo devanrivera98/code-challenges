@@ -31,4 +31,21 @@ function calculateTax(price: number | string, tax: number) {
 }
 console.log(calculateTax(45, .07))
 console.log(calculateTax('$45', .07))
-// above should be the same 
+// above should be the same
+
+const stuff: (number | string)[] = [1,2,3, 'das'];
+// const stuff: number[] | string[] mean you want an array of either all numbers or all strings
+
+const coords: (Point| Loc)[] = []
+coords.push({lat:321.23, long: 23.43})
+coords.push({x:2123, y:42})
+
+//literal types
+let zero: 0 = 0
+let mood: 'Happy' | 'Sad' = 'Happy';
+mood = 'Sad'
+
+type DayOfWeek = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday'
+
+let today: DayOfWeek = 'Monday'
+// needs to be a literal value of the type dayOfWeek
