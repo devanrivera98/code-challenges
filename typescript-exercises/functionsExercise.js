@@ -1,3 +1,4 @@
+'use strict';
 // **********************************************
 // ******************* PART 1 *******************
 // **********************************************
@@ -6,9 +7,8 @@
 // If no name is provided, it should default to "you"
 // twoFer() => "One for you, one for me"
 // twoFer("Elton") => "One for Elton, one for me"
-function twoFer(name) {
-  if (name === void 0) { name = 'you'; }
-  return 'One for '.concat(name, ', one for me.');
+function twoFer(name = 'you') {
+  return `One for ${name}, one for me.`;
 }
 // **********************************************
 // ******************* PART 2 *******************
@@ -25,7 +25,7 @@ function twoFer(name) {
 function isLeapYear1(year) {
   return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
 }
-const isLeapYear2 = function (year) {
+const isLeapYear2 = (year) => {
   return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
 };
 console.log(twoFer());

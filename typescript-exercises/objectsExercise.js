@@ -1,4 +1,5 @@
-var dune = {
+"use strict";
+const dune = {
     title: "Dune",
     originalTitle: "Dune Part One",
     director: "Denis Villeneuve",
@@ -9,7 +10,7 @@ var dune = {
         grossWorldwide: 400671789,
     },
 };
-var cats = {
+const cats = {
     title: "Cats",
     director: "Tom Hooper",
     releaseYear: 2019,
@@ -23,8 +24,8 @@ var cats = {
 // It should return the movie's worldwide gross minus its budget
 // For example...
 // getProfit(cats) => -21166652
-var getProfit = function (movie) {
-    var _a = movie.boxOffice, grossWorldwide = _a.grossWorldwide, budget = _a.budget;
+const getProfit = (movie) => {
+    const { grossWorldwide, budget } = movie.boxOffice;
     return grossWorldwide - budget;
 };
 console.log(getProfit(cats));

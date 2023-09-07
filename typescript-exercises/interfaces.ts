@@ -64,5 +64,41 @@ const elton: Dog = {
   breed: 'Shepard',
   bark() {
     return 'Woof Woof!'
-  }
+  },
+};
+
+interface ServiceDog extends Dog {
+  job: 'drug sniffer' | 'bomb' | 'guide dog';
+}
+
+const chewy: ServiceDog = {
+  name: 'Chewy',
+  age: 4.5,
+  breed: 'lab',
+  bark() {
+    return 'Woof Woof'
+  },
+  job: 'guide dog'
+}
+
+interface Human {
+  name: string
+}
+
+interface Employee {
+  id: number,
+  email: string
+}
+
+interface Engineer extends Human,Employee {
+  level: string,
+  languages: string[]
+}
+
+const pierre: Engineer = {
+  name: 'Pierre',
+  id: 123897,
+  email: 'pierre@gmail.com',
+  level: 'senior',
+  languages: ['js', 'python']
 }
