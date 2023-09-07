@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 // **********************************************
 // ******************* PART 1 *******************
 // **********************************************
@@ -8,7 +8,7 @@
 // twoFer() => "One for you, one for me"
 // twoFer("Elton") => "One for Elton, one for me"
 function twoFer(name = 'you') {
-  return `One for ${name}, one for me.`;
+    return `One for ${name}, one for me.`;
 }
 // **********************************************
 // ******************* PART 2 *******************
@@ -23,10 +23,10 @@ function twoFer(name = 'you') {
 // - year is a multiple of 400
 // hint - use modulo
 function isLeapYear1(year) {
-  return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
+    return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
 }
 const isLeapYear2 = (year) => {
-  return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
+    return ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0);
 };
 console.log(twoFer());
 console.log(isLeapYear1(2012));
