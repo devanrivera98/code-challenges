@@ -55,7 +55,7 @@
     // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     // "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
     // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
-    // "outDir": "./",                                   /* Specify an output folder for all emitted files. */
+    "outDir": "typescript-exercises/dist",                                   /* Specify an output folder for all emitted files. */
     // "removeComments": true,                           /* Disable emitting comments. */
     // "noEmit": true,                                   /* Disable emitting files from a compilation. */
     // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
@@ -108,7 +108,7 @@
   },
   // files are what I wanted to be included when I run tsc
   // "files": ["farmstand.ts", "index.ts"]
-  //excludes by default will exclude node_modules if excluded isnt filled in and node_modules will need to included manually 
+  //excludes by default will exclude node_modules if excluded isnt filled in and node_modules will need to included manually
   "include": ["typescript-exercises/src"],
   "exclude": ["typescript-exercises/src/dontTouch.ts"]
 }
