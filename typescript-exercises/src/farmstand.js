@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 const printProductSummary = (product) => {
-  console.log(`${product.name}`);
+    console.log(`${product.name}`);
 };

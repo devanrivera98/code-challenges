@@ -107,5 +107,8 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   // files are what I wanted to be included when I run tsc
-  "files": ["farmstand.ts", "index.ts"]
+  // "files": ["farmstand.ts", "index.ts"]
+  //excludes by default will exclude node_modules if excluded isnt filled in and node_modules will need to included manually 
+  "include": ["typescript-exercises/src"],
+  "exclude": ["typescript-exercises/src/dontTouch.ts"]
 }
