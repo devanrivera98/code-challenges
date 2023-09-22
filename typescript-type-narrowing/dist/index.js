@@ -62,3 +62,41 @@ function printName1(entity) {
         entity;
     }
 }
+function isCat(animal) {
+    return animal.numLives !== undefined;
+}
+function makeNoise(animal) {
+    if (isCat(animal)) {
+        animal;
+        return "Meow";
+    }
+    else {
+        animal;
+        return "Woof";
+    }
+}
+function getFarmAnimalSound(animal) {
+    switch (animal.kind) {
+        case ('pig'):
+            return 'Oink';
+        case ('cow'):
+            return 'Moo';
+        case ('rooster'):
+            return "Rooster cry";
+        case ('sheep'):
+            return "bahhh";
+        default:
+            //We should never make it here, if we handled all cases correctly
+            // typescript can help notify below if you include something that isnt valid
+            // if the animal put in the parameter is not of type FarmAnimal exhaustiveCheck will run
+            const _exhaustiveCheck = animal;
+            return _exhaustiveCheck;
+    }
+}
+const stevie = {
+    name: 'Stevie Chicks',
+    weight: 2,
+    age: 1.5,
+    kind: 'rooster'
+};
+console.log(getFarmAnimalSound(stevie));
