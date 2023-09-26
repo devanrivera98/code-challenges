@@ -1,13 +1,4 @@
-import axios from 'axios';
-axios.get('http://jsonplaceholder.typicode.com/users/1')
-    .then((res) => {
-    console.log('Wooo');
-    res.data.forEach(printUser);
-})
-    .catch((e) => {
-    console.log('Error', e);
-});
-function printUser(user) {
-    console.log(user.name);
-    console.log(user.email);
-}
+import { add, sample as randomSample } from './utils.js';
+const sample = 123;
+console.log(randomSample([12, 3, 43]));
+console.log(add(1, 2));
