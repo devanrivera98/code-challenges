@@ -5,7 +5,7 @@
   "requires": true,
   "description": "A full stack JavaScript solo project.",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "packages": {},
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
@@ -24,11 +24,13 @@
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
     "prepare": "husky install",
     "start": "NODE_ENV=production node server/server.js",
+    "serve": "webpack server",
     "test": "jest --watchAll",
     "build": "webpack"
   },
