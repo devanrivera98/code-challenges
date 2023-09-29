@@ -1,7 +1,8 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.ts',
   devtool: 'inline-source-map',
   module: {
@@ -28,6 +29,6 @@ module.exports = {
       directory: path.join(__dirname, './'),
 
     },
-
   },
+  plugins: [new CleanWebpackPlugin()],
 };

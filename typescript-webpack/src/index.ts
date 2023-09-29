@@ -6,7 +6,7 @@ console.log('From index file')
 const elton = new Dog('Elton', 'Ausie', 0.5)
 elton.bark()
 
-console.log(add(4,5))
+console.log(add(3,5))
 console.log(divide(4, 5))
 console.log(multiply(4, 5))
 
