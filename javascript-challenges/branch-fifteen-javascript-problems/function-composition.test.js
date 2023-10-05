@@ -7,7 +7,7 @@ describe('compose', () => {
 
     // const composedFunction = functionComposition(argument1); // Returns a function
     // const testOutcome = composedFunction(initialX); // Invokes the returned function with initialX
-    // THE BELOW IS THE SAME AS THE COMMENT OUT LINE JUST CLEANER 
+    // THE BELOW IS THE SAME AS THE COMMENT OUT LINE JUST CLEANER
 
     const testOutcome = functionComposition(argument1)(initialX);
 
