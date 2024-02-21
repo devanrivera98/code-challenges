@@ -9,7 +9,6 @@ export default function FoodCard() {
     const getRecipeEntries = async () => {
       try {
         const entries = await fetchEntries();
-        console.log(entries)
         setRecipes(entries);
       } catch (error) {
         console.error(error)
