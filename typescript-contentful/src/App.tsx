@@ -1,13 +1,13 @@
-import fetchEntries from './utils/fetchEntries'
 import './App.css'
+import FoodCard from './components/FoodCard'
 
  function App() {
 
-  fetchEntries()
 
   return (
     <>
       <h1>Contentful</h1>
+      <FoodCard/>
     </>
   )
 }
