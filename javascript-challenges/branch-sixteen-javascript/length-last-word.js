@@ -3,7 +3,6 @@ export default function lastWord(s) {
   // const newArr = s.trim().split(/\s+/)
 
   const newArr = s.split(/\s+/).filter(word => word !== '');
-  console.log(newArr);
   return newArr[newArr.length - 1].length;
 
 }
