@@ -1,20 +1,36 @@
 export default function bestTime(prices) {
 
-  if (prices.length < 2) {
-    return 0; //
-  }
-
-  let minPrice = prices[0];
-  let maxProfit = 0;
+  let currentPrice = prices[0];
+  let profit = 0;
 
   for (let price of prices) {
-    if (price < minPrice) {
-      minPrice = price;
+    if (price < currentPrice) {
+      currentPrice = price;
     } else {
-      let potentialProfit = price - minPrice;
-      maxProfit = Math.max(maxProfit, potentialProfit);
+      let reducedPrice = price - currentPrice
+      profit = Math.max(profit, reducedPrice)
     }
   }
 
-  return maxProfit > 0 ? minPrice : maxProfit;
+  if (profit < 0) {
+    return currentPrice
+  } else {
+    return profit
+  }
+
+  // second attempt
+
+  // let left = 0;
+  // let right = 1;
+  // let biggestProfit = 0;
+
+  // while (right < prices.length) {
+  //   if (prices[left] > prices[right]) {
+  //     left = right
+  //   } else {
+  //     biggestProfit = Math.max(biggestProfit, prices[right] - prices[left])
+  //   }
+  //   right++
+  // }
+  // return biggestProfit;
 }
