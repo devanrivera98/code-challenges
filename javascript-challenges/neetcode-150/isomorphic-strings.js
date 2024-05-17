@@ -1,21 +1,33 @@
 export default function isomorphicStrings(s, t) {
-  const firstMap = new Map()
+  const firstMap = new Map();
+  const secondMap = new Map();
 
   for (let i = 0; i < s.length; i++) {
-    if (!(firstMap.has(s[i]))) {
-      firstMap.set(t[i], s[i])
-    }
-  }
-console.log(firstMap)
+    let charS = s[i];
+    let charT = t[i];
 
-
-  for (let j = 0; j < t.length; j++) {
-    console.log(t[j])
-    console.log(firstMap.get(t[j]))
-    if (s[j] !== firstMap.get(t[j])) {
+    if (!(firstMap.has(charS)) && secondMap.has(charT)) {
       return false
     }
+
+    if ((firstMap.has(charS)) && !(secondMap.has(charT))) {
+      return false
+    }
+
+    if (!(firstMap.has(charS))) {
+      firstMap.set(charS, charT)
+    }
+    if (!(secondMap.has(charT))) {
+      secondMap.set(charT, charS)
+    }
+    if (firstMap.has(charS)) {
+      if (firstMap.get(charS) !== charT) {
+        return false;
+      }
+    }
   }
-  return true
+  return true;
+  console.log(secondMap)
   console.log(firstMap)
+
 }
