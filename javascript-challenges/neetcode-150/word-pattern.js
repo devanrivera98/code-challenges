@@ -4,7 +4,10 @@ let firstMap = new Map();
 let secondMap = new Map();
 
 let stringArray = s.split(' ');
-console.log(stringArray)
+
+if (pattern.length !== stringArray.length) {
+  return false
+}
 
 for (let i = 0; i < pattern.length; i++) {
 
@@ -20,8 +23,26 @@ for (let i = 0; i < pattern.length; i++) {
     secondMap.set(charS, charP)
   }
 
-  // would i need a third map for the vowel and the assigned string to the vowel
+  if (firstMap.has(charP) && !(secondMap.has(charS))) {
+    if (firstMap.get(charP) != charS) {
+      return false
+    }
+  }
 
-  console.log(secondMap)
+  if (secondMap.has(charS) && !(firstMap.has(charP))) {
+    if (secondMap.get(charS) !== charP) {
+      return false
+    }
+  }
+
+  if (firstMap.has(charP) && secondMap.has(charS)) {
+    if (firstMap.get(charP) !== charS) {
+      return false
+    }
+    if (secondMap.get(charS) !== charP) {
+      return false
+    }
+  }
 }
+return true
 }
