@@ -9,6 +9,9 @@
   "packages": {},
   "devDependencies": {
     "@babel/preset-env": "^7.20.2",
+    "@babel/preset-typescript": "^7.24.1",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
     "@types/lodash": "^4.14.199",
     "@types/node": "^20.7.0",
     "@types/uuid": "^9.0.8",
@@ -22,6 +25,7 @@
     "lint-staged": "^13.0.3",
     "markuplint": "^2.11.0",
     "npm-run-all": "^4.1.5",
+    "ts-jest": "^29.1.2",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
@@ -39,7 +43,6 @@
     ]
   },
   "dependencies": {
-    "@types/jest": "^29.5.2",
     "@types/react": "^18.2.55",
     "axios": "^1.5.0",
     "lodash": "^4.17.21",
